@@ -39,7 +39,9 @@ export function FloatingElements({ mousePosition }: FloatingElementsProps) {
       {[...Array(8)].map((_, index) => (
         <Sphere
           key={index}
-          ref={(el) => (sphereRefs.current[index] = el)}
+          ref={(el) => {
+            sphereRefs.current[index] = el;
+          }}
           args={[0.1 + Math.random() * 0.2]}
           position={[
             (Math.random() - 0.5) * 10,
