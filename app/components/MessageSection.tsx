@@ -5,8 +5,7 @@ import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 
 const message = [
-  "Dear Beautiful Soul,",
-  "",
+"Happy Birthday, Lipsa JJ! 🎉",  "",
   "Another year around the sun, and what a radiant journey it's been watching you grow, laugh, dream, and shine.",
   "",
   "You have this incredible way of making everyone around you feel seen, heard, and loved. Your kindness is like sunshine – it brightens every room you enter and warms every heart you touch.",
@@ -21,10 +20,10 @@ const message = [
   "",
   "You deserve all the happiness, all the success, and all the beautiful surprises this world has to offer.",
   "",
-  "Happy Birthday, my wonderful friend! 🎉💖",
+  "Happy Birthday, BROhhhh! 🎉💖",
   "",
   "With all my love and best wishes,",
-  "Your Friend"
+  "Rudra Daadaaaa"
 ];
 
 export function MessageSection() {
@@ -103,7 +102,7 @@ export function MessageSection() {
                     ? "text-2xl font-serif text-gradient font-bold" 
                     : line.startsWith("•") 
                     ? "text-purple-700 ml-4" 
-                    : line === "With all my love and best wishes," || line === "Your Friend"
+                    : line === "With all my love and best wishes," || line === "Rudra Daadaaaa"
                     ? "text-purple-800 italic text-right"
                     : "text-purple-800"
                   }

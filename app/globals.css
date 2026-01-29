@@ -3,6 +3,7 @@
 :root {
   --font-playfair: 'Playfair Display', serif;
   --font-inter: 'Inter', sans-serif;
+  --font-dancing: 'Dancing Script', cursive;
   --background: #fef7f7;
   --foreground: #2d1b69;
 }
@@ -12,6 +13,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
+  --font-cursive: var(--font-dancing);
 }
 
 body {
@@ -35,10 +37,12 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ec4899, #a855f7, #ec4899);
+  background: linear-gradient(135deg, #ec4899, #a855f7, #f59e0b, #ec4899);
+  background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease-in-out infinite;
 }
 
 .floating-animation {
@@ -50,6 +54,15 @@ body {
 }
 
 /* Keyframes */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);

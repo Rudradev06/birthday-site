@@ -16,19 +16,19 @@ export function FloatingElements({ mousePosition }: FloatingElementsProps) {
   useFrame((state) => {
     if (groupRef.current) {
       // Subtle rotation based on time
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.1;
+      groupRef.current.rotation.y = state.clock.elapsedTime * 0.05;
       
-      // Parallax effect based on mouse position
-      groupRef.current.position.x = mousePosition.x * 0.5;
-      groupRef.current.position.y = mousePosition.y * 0.3;
+      // Slower parallax effect based on mouse position
+      groupRef.current.position.x = mousePosition.x * 0.3;
+      groupRef.current.position.y = mousePosition.y * 0.2;
     }
 
     // Individual sphere animations
     sphereRefs.current.forEach((sphere, index) => {
       if (sphere) {
-        sphere.position.y = Math.sin(state.clock.elapsedTime + index) * 0.5;
-        sphere.rotation.x = state.clock.elapsedTime * 0.5;
-        sphere.rotation.z = state.clock.elapsedTime * 0.3;
+        sphere.position.y = Math.sin(state.clock.elapsedTime * 0.8 + index) * 0.7;
+        sphere.rotation.x = state.clock.elapsedTime * 0.3;
+        sphere.rotation.z = state.clock.elapsedTime * 0.2;
       }
     });
   });
